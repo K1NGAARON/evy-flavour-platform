@@ -1,0 +1,11 @@
+.review-text-wrapper {
+    gap: 5px;
+}
+
+.review-text-wrapper i {
+    /* color: ; */
+}
+
+.review-text-wrapper p {
+    color: var(--white);
+}

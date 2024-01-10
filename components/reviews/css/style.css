@@ -1,0 +1,39 @@
+.review-wrapper {
+    flex-direction: column;
+    width: 100%;
+    align-items: flex-start;
+}
+
+.review-wrapper .review-author {
+    font-weight: 700;
+}
+
+.review-wrapper .review-author,
+.review-wrapper .review-body {
+    color: var(--white);
+}
+
+.dots {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    align-self: center;
+}
+
+.dots .dot {
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background-color: var(--white);
+    opacity: 0.4;
+    transition: var(--transition);
+}
+
+.dots .dot:hover {
+    cursor: pointer;
+}
+
+.dots .dot.active {
+    opacity: 1;
+    transition: var(--transition);
+}

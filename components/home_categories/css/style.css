@@ -1,0 +1,27 @@
+.categories-wrapper {
+    gap: 60px;
+}
+
+.categories-wrapper .item {
+    flex: 1 0 25%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    overflow: hidden;
+}
+
+.categories-wrapper .item a {
+    color: var(--black);
+    font-weight: 700;
+    font-size: 20px;
+}
+
+.categories-wrapper .item img {
+    border-radius: 12px;
+    transition: var(--transition);
+}
+
+.categories-wrapper .item:hover img {
+    transform: scale(1.05);
+    transition: var(--transition);
+}
