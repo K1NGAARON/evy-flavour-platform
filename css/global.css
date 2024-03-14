@@ -69,6 +69,11 @@ p {
     font-size: 16px;
 }
 
+.width-50 p {
+	width: 50%;
+	margin: 0 auto;
+}
+
 .label.elementor-widget {
 	width: fit-content;
 }
@@ -84,8 +89,21 @@ p {
 	border-radius: 30px;
 }
 
-.label p {
+.label.large {
+	font-size: 20px;
+}
+
+.label.center {
+	margin: 0 auto;
+}
+
+.label.blue {
+	background-color: #6EC1E4;
+}
+
+.label.blue.large p {
 	margin: unset;
+	padding: 15px;
 }
 
 ul li,
@@ -313,4 +331,9 @@ input:focus {
 
 .add-listing-step .section-title {
     display: none;
+}
+
+.elementor-icon-box-wrapper:hover .elementor-icon-box-title,
+.elementor-icon-box-wrapper:hover svg path {
+    color: red;
 }
