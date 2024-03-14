@@ -1,8 +1,9 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400..900&display=swap');
 
 :root {
     --primary: #7ED7C0;
     --secondary: #F4D556;
+    --pink: #f59293;
     --black: #141414;
     --white: #ffffff;
     --light-grey: #fafafa;
@@ -13,7 +14,7 @@
 
 * {
     box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
+    font-family: "Playfair Display", serif;
     font-weight: 400;
     margin: 0;
     padding: 0;
@@ -26,8 +27,16 @@ html {
 
 h1,
 h2,
+h3,
+p,
+a {
+	font-family: "Playfair Display", serif!important;
+}
+
+h1,
+h2,
 h3 {
-    font-weight: 700;
+    font-weight: 700!important;
 }
 
 h1 {
@@ -60,11 +69,43 @@ p {
     font-size: 16px;
 }
 
+.label.elementor-widget {
+	width: fit-content;
+}
+
+.label {
+	background-color: var(--secondary);
+	padding: 5px 15px;
+	font-weight: 700;
+	font-size: 14px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border-radius: 30px;
+}
+
+.label p {
+	margin: unset;
+}
+
 ul li,
 ol li {
     display: flex;
     flex-direction: column;
     gap: 10px;
+}
+
+.menu-item {
+    flex-direction: row;
+    gap: unset;
+}
+
+.menu-item-has-children {
+    flex-direction: row;
+}
+
+.elementor img {
+    border-radius: 10px;
 }
 
 img {
@@ -140,6 +181,8 @@ img {
     gap: 20px;
 }
 
+/* RESET FORM FAMILY UL + OL */
+
 .form-wrapper {
     display: flex;
     width: 100%;
@@ -156,22 +199,70 @@ img {
     margin: 0;
 }
 
-.form-wrapper input {
+.form-wrapper input,
+input {
     color: var(--black);
     flex: 1;
     width: 100%;
     padding: 16px;
     background-color: hsla(0, 0%, 100%, 0.1);
     border: none;
-    border-bottom: 1px solid var(--primary);
-    border-radius: 0;
+    border: 1px solid var(--primary);
+    border-radius: 10px;
     height: 60px;
     outline: none;
     font-size: 18px;
     transition: border-bottom 200ms ease;
 }
 
-.form-wrapper input:focus {
+.form-row {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+}
+
+.form-wrapper input[type="checkbox"] {
+    width: fit-content;
+    flex: 0;
+    height: fit-content;
+}
+
+.form-checkbox-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    border: 1px solid var(--primary);
+    border-radius: 10px;
+    padding: 16px;
+}
+
+.form-checkbox-wrapper label {
+    margin-bottom: 0;
+}
+
+.form-checkbox-wrapper .heading {
+    font-weight: 700;
+}
+
+select {
+    width: 100%;
+    border: 1px solid var(--primary);
+    border-radius: 10px;
+    padding: 10px;
+    margin: 10px auto;
+}
+
+select option {
+    padding: 5px;
+}
+
+select:-internal-list-box option:checked {
+    background-color: var(--primary);
+}
+
+.form-wrapper input:focus,
+input:focus {
     transition: border-bottom 200ms ease;
     border-bottom: 2px solid var(--primary);
 }
@@ -188,4 +279,25 @@ img {
 
 .form-wrapper .btn:hover {
     transform: scale(1.02);
+}
+
+.form-wrapper .form-row.col {
+    display: flex;
+    flex-direction: column;
+}
+
+.messaging-center.inbox-header-icon {
+	display: none;
+}
+
+.header .header-container {
+	width: 80%;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+.header.header-style-alternate.header-scroll .header-container .header-top .logo a img, .header.header-style-default .header-container .header-top .logo a img  {
+	max-height: 60px!important;
 }
