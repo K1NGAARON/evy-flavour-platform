@@ -353,3 +353,34 @@ input:focus {
 .add-listing-step .section-title {
     display: none;
 }
+
+.elementor-icon-box-wrapper .elementor-icon-box-icon {
+    transition: var(--transition);
+}
+
+.elementor-icon-box-wrapper:hover .elementor-icon-box-icon {
+    scale: 1.20;
+    transition: var(--transition);
+}
+
+#submit-job-form .form-group.field-type-url {
+    padding: 20px!important;
+}
+
+.footer .c_widget {
+    width: 100%;
+}
+
+.footer .custom-footer {
+	display: flex;
+	justify-content: center;
+	width: 100%;
+}
+
+.footer .custom-footer .wp-block-column {
+	flex: 1 0;
+}
+
+.footer .custom-footer .wp-block-column:nth-of-type(2) {
+	flex: 2 0;
+}
