@@ -371,6 +371,16 @@ input:focus {
     width: 100%;
 }
 
+.footer .c_widget .menu > li > a,
+.footer p,
+.footer a,
+.footer .copyright a,
+.copyright a {
+    color: var(--white);
+    font-weight: 400;
+    font-size: 14px;
+}
+
 .footer .custom-footer {
 	display: flex;
 	justify-content: center;
